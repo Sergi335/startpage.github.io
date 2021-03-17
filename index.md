@@ -76,44 +76,7 @@
                 });
             });
    </script>
-   
-   <!--Script del tiempo-->
-    
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
-    
-    <script>
-        $(document).ready(function() {
-             getWeather(); //Get the initial weather.
-             setInterval(getWeather, 600000); //Update the weather every 10 minutes.
-            });
-        function getWeather() {
-            $.simpleWeather({
-                woeid: '752101', //2357536
-                location: '',
-                unit: 'c',
-                success: function(weather) {
-
-                    html = '<div class="containerw"><img class="grande" src="'+weather.forecast[0].image+'">';
-                    html += '<div class="tempw"><h2>'+weather.temp+'&deg;</h2></div></div>';
-                    html += '<p><span class="ciudad">'+weather.city+'</span><br/>';
-                    html += '<span class="currently">&nbsp;'+weather.currently+'</span> &nbsp;<br/><br/><span class="tmp">'+weather.low+'&deg;MIN/'+weather.high+'&deg;MAX</span><br/><span class="data">Viento <span class="negrita">'+weather.wind.speed+' '+weather.units.speed+'</span><br/>Humedad <span class="negrita"> '+weather.humidity+'&#37;</span></span></p>';
-                    html += '<div class="previw"><img src="'+weather.forecast[1].thumbnail+'">';
-                    html += '<img src="'+weather.forecast[2].thumbnail+'">';
-                    html += '<img src="'+weather.forecast[3].thumbnail+'">';
-                    html += '<img src="'+weather.forecast[4].thumbnail+'"><div class="container"><h3>'+weather.forecast[1].day+'</h3></div><div class="container"><h3>'+weather.forecast[2].day+'</h3></div><div class="container"><h3>'+weather.forecast[3].day+'</h3></div><div class="container"><h3>'+weather.forecast[4].day+'</h3></div></div>';
-                    
-                    
-                    
-                    $("#weather").html(html);
-                    },
-                    error: function(error) {
-                        $("#weather").html('<p>'+error+'</p>');
-                    }   
-                });
-            }
-            
-    </script>
-    <script>
+   <script>
         $(document).ready(function(){
             $("#clima").click(function(){
                 $("#weather").slideToggle("slow");
