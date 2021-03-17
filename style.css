@@ -1,0 +1,296 @@
+body {
+/*    background-image: url(images/background4.jpg);*/
+    margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+/* Mitad Superior */
+
+.superior {
+    //max-height: 600px;
+    //border: 1px solid black;
+}
+
+/* Weather */
+
+@font-face {
+    font-family: 'weather';
+    src: url('weather/artill_clean_icons-webfont.eot');
+    src: url('') format('embedded-opentype'),
+         url('weather/artill_clean_icons-webfont.woff') format('woff'),
+         url('weather/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('weather/artill_clean_icons-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.loading {
+  margin: 65px 0 0;
+}
+
+#weather {
+    //border: 1px solid;
+    width: 250px;
+    margin-left: 25px;
+    /*display: flex;
+    flex-flow:wrap;*/
+}
+
+#weather h1 {
+    //border: 1px solid;
+    padding: 10px;
+    height: 100px;
+    display: inline-block;
+    margin: 0;
+    font-family: weather;
+    color: gray;
+    font-size: 100px;
+    width: auto;
+}
+#weather h2 {
+    //border: 1px solid;
+    //padding: 10px;
+    display:inline-block; 
+    vertical-align: top;
+    margin: 35px 0px 0px 0px ;
+    color: gray;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+#weather ul {
+    //border: 1px solid;
+    margin: 0px 15px;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    display:;
+}
+
+#weather li {
+    color: gray;
+    font-family: Arial;
+    margin-left: 0px;
+ /* background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;*/
+}
+
+#weather h1.icon-0:before { content: ":"; }
+#weather h1.icon-1:before { content: "p"; }
+#weather h1.icon-2:before { content: "S"; }
+#weather h1.icon-3:before { content: "Q"; }
+#weather h1.icon-4:before { content: "S"; }
+#weather h1.icon-5:before { content: "W"; }
+#weather h1.icon-6:before { content: "W"; }
+#weather h1.icon-7:before { content: "W"; }
+#weather h1.icon-8:before { content: "W"; }
+#weather h1.icon-9:before { content: "I"; }
+#weather h1.icon-10:before { content: "W"; }
+#weather h1.icon-11:before { content: "I"; }
+#weather h1.icon-12:before { content: "I"; }
+#weather h1.icon-13:before { content: "I"; }
+#weather h1.icon-14:before { content: "I"; }
+#weather h1.icon-15:before { content: "W"; }
+#weather h1.icon-16:before { content: "I"; }
+#weather h1.icon-17:before { content: "W"; }
+#weather h1.icon-18:before { content: "U"; }
+#weather h1.icon-19:before { content: "Z"; }
+#weather h1.icon-20:before { content: "Z"; }
+#weather h1.icon-21:before { content: "Z"; }
+#weather h1.icon-22:before { content: "Z"; }
+#weather h1.icon-23:before { content: "Z"; }
+#weather h1.icon-24:before { content: "E"; }
+#weather h1.icon-25:before { content: "E"; }
+#weather h1.icon-26:before { content: "3"; }
+#weather h1.icon-27:before { content: "a"; }
+#weather h1.icon-28:before { content: "A"; }
+#weather h1.icon-29:before { content: "a"; }
+#weather h1.icon-30:before { content: "A"; }
+#weather h1.icon-31:before { content: "6"; }
+#weather h1.icon-32:before { content: "1"; }
+#weather h1.icon-33:before { content: "6"; }
+#weather h1.icon-34:before { content: "1"; }
+#weather h1.icon-35:before { content: "W"; }
+#weather h1.icon-36:before { content: "1"; }
+#weather h1.icon-37:before { content: "S"; }
+#weather h1.icon-38:before { content: "S"; }
+#weather h1.icon-39:before { content: "S"; }
+#weather h1.icon-40:before { content: "M"; }
+#weather h1.icon-41:before { content: "W"; }
+#weather h1.icon-42:before { content: "I"; }
+#weather h1.icon-43:before { content: "W"; }
+#weather h1.icon-44:before { content: "a"; }
+#weather h1.icon-45:before { content: "S"; }
+#weather h1.icon-46:before { content: "U"; }
+#weather h1.icon-47:before { content: "S"; }
+
+
+
+#weather .updated {
+  opacity: 0.45;
+}
+
+/* Tiles */
+
+.tile {
+    border-left: 3px solid darkslategray;
+    /*border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;*/
+    min-width: 250px;
+    margin-bottom: 5px;
+    
+    
+}
+.tile a {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 18px;
+    background-color:;
+    text-decoration: none;
+    color: black;
+    font-family: Segoe UI;
+    font-size: 12px;
+}
+.tile img {
+    vertical-align:text-top;
+    margin-right: 5px;
+}
+.tile a:hover {
+    background-color: darkslategray;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fila {
+    border: 1px solid black;
+    //min-width: 250px;
+    //margin-top: 60px;
+    display: inline-block;
+}
+.filas {
+    border: 1px solid black;
+    //padding-bottom: 155px;
+    display: inline-block;
+    //width: 150px;
+    margin-left: 50px;
+}
+.filas h3 {
+    font-family: segoe UI;
+    margin: 0;
+    padding: 5px 10px;
+}
+#hider {
+    vertical-align: middle;
+    width: 25px;
+    //border: 1px solid black;
+    background-color:darkslategray;
+}
+#hider:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+#logo {
+    vertical-align: middle;
+    width: 25px;
+    /*-ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg); */
+    //border: 1px solid black;
+    margin-left: 15px;
+}
+#logo:hover {
+    cursor:pointer;
+}
+
+
+/* Mitad Inferior */
+/* Izquierda */
+
+.inferior{
+    border: 1px solid black;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    max-height: 70px;
+    background-color: beige
+}
+.inf-izq {
+    border: 1px solid black;
+    float: left;
+    width: 50%;
+    padding: 20px 20px;
+    text-align: center;
+}
+.inf-dr {
+    border: 1px solid black;
+    width: 50%;
+    float: right;
+    color: white;
+}
+input[type=search] {
+    min-width: 500px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid gray ;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    vertical-align: middle;
+    color: black;
+    background-color:  rgba(255,255,255,.3);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-indent: 10px;
+}
+input[type=search]:focus {
+    border: 1px solid yellow;
+    
+}
+#busqueda {
+    //border: 1px solid black;
+    display: inline-block;
+    //width: 60%;
+    //text-align: center;
+    //margin-top: 650px;
+}
+
+.item-icon {
+    //border: 1px solid;
+    width: 16px;
+    height: 16px;
+    margin: 1px 6px 1px 0;
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    background-image: url(https://www.google.com/s2/favicons?domain=www.softzone.es);
+    background-size: 16px 16px;
+}
+.item-name {
+    //border: 1px solid;
+    line-height: 18px;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 22px;
+}
+.bookmark {
+    //border: 1px solid;
+}
+.controles {
+    //border: 1px solid;
+    text-align: center;
+    //line-height: 30px;
+}
+.oculto {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
+#toggler2 {
+    visibility: hidden;
+}

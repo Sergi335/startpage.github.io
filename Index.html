@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>Sergi Start</title>
+</head>
+<body>
+   <script src="jquery-3.2.1.min.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+   
+   <!--Scripts del buscador-->
+   
+   <script>
+       $( document ).ready(function() {
+            $("#logo").click(function(){
+                $("#buscar").toggleClass('visible')
+                });
+            });
+   </script>
+   <script>
+       $( document ).ready(function() {
+            $("#logo").click(function(){
+                $("#buscar").focus()
+                });
+            });
+   </script>
+   
+   <!--Script del tiempo-->
+   
+   <script>
+        $(document).ready(function() {
+             getWeather(); //Get the initial weather.
+             setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+            });
+        function getWeather() {
+            $.simpleWeather({
+                woeid: '752101', //2357536
+                location: '',
+                unit: 'c',
+                success: function(weather) {
+                    if(weather.temp > 75) {
+                    $('body').animate({backgroundColor: '#F7AC57'}, 1500);
+                    } else {
+                        //$('body').animate({backgroundColor: '#0091c2'}, 1500);
+                        }
+                    html = '<h1 class="icon-'+weather.code+'"></h1>';
+                    html += '<h2>'+weather.temp+'&deg;</h2>';
+                    html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+                    html += '<li class="currently">'+weather.currently+'</li></ul>';
+                    //html += '<li>'+weather.tempAlt+'&deg;C</li></ul>';
+                    $("#weather").html(html);
+                    },
+                    error: function(error) {
+                        $("#weather").html('<p>'+error+'</p>');
+                    }   
+                });
+            }
+            
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        
+        $(document).ready(function() {    
+                $("#hider").click(function(){
+                    $("#toggler").toggleClass("visible");
+    
+            });
+        });
+        
+    </script>
+    <div id="weather"></div>
+    <div class="superior">
+    <iframe src="https://calendar.google.com/calendar/embed?src=sergiadn335%40gmail.com&ctz=Europe%2FMadrid" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="controles">
+        <form id="busqueda" class="oculto" action="https://google.com/search" type="GET">
+            <input id="buscar" type="search" name="q" autofocus><br/>
+        </form>
+    </div>
+    <div id="toggler" class="filas oculto"> 
+      <div class="fila">
+        <h3>Inicio</h3>
+         <div class="tile">
+             <a href="https://mail.google.com/mail/u/0/?tab=wm#inbox" target="_blank"><img src="images/gmail.png" width="16px" alt="gmail" />Gmail</a>
+         </div>
+         <div class="tile">
+             <a href="https://outlook.live.com/mail/" target="_blank"><img src="images/outlook.png" width="16px" alt="outlook" />Outlook</a>
+         </div>
+         <div class="tile">
+             <a href="http://fp.edu.gva.es/av/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=http://fp.edu.gva.es/av/" width="16px" alt="moodle" />Aula FP</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.alertadigital.com/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=www.alertadigital.com" width="16px" alt="Alerta Digital" />Alerta Digital</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.20minutos.es/"  target="_blank"><img src="images/20Minutos.svg" width="16px" alt="20 Minutos" />20 Minutos</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.infojobs.net/candidate/my-infojobs.xhtml?dgv=1660446257568886965&nocache=true" target="_blank"><img src="images/infojobs.png" width="20px" alt="Infojobs" />Infojobs</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.hispashare.com/" target="_blank"><img src="images/hispashare.png" width="20px" alt="Hispashare" />Hispashare</a>
+         </div>
+         <div class="tile">
+             <a href="http://tumejortorrent.com/" target="_blank"><img src="images/tumejortorrent.jpg" width="16px" alt="tumejortorrent" />Tumejortorrent</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.mejortorrent.com/torrents-de-peliculas-hd-alta-definicion.html" target="_blank"><img src="https://www.google.com/s2/favicons?domain=www.mejortorrent.com" width="16px" alt="mejortorrent peliculas hd" />Mejortorrent Películas HD</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.mejortorrent.com/torrents-de-series-hd-alta-definicion.html" target="_blank"><img src="https://www.google.com/s2/favicons?domain=www.mejortorrent.com" width="16px" alt="mejortorrent series hd" />Mejortorrent Series HD</a>
+         </div>
+         <div class="tile">
+             <a href="https://katcr.co/new/" target="_blank"><img src="images/Kickasstorrents.png" width="20px" alt="Kickass torrents" />Kickass Torrents</a>
+         </div>
+         <div class="tile">
+             <a href="https://papaly.com/"><img src="images/papaly.png" width="16px" alt="Papaly" />Papaly</a>
+         </div>
+         <div class="tile">
+             <a href="https://chrome.google.com/webstore/category/extensions" target="_blank"><img src="images/chromestore.png" width="16px" alt="Chrome Store" />Chrome Web Store</a>
+         </div>
+         <div class="tile">
+             <a href="https://play.google.com/store" target="_blank"><img src="https://www.google.com/s2/favicons?domain=https://play.google.com/store" width="16px" alt="Play Store" />Play Store</a>
+         </div>
+     </div>
+     <div class="fila">
+         <h3>Herramientas</h3>
+         <div class="tile">
+             <a href="https://www.google.es/search?q=traductor&oq=trad&aqs=chrome.0.69i59j69i65j69i59j69i65l2j69i60.2881j0j7&sourceid=chrome&ie=UTF-8" target="_blank"><img src="https://www.google.com/s2/favicons?domain=www.google.es" width="16px" alt="traductor" />Traductor</a>
+         </div>
+         <div class="tile">
+             <a href="https://calendar.google.com/calendar/r#main_7" target="_blank"><img src="images/calendar.png" width="16px" alt="calendario" />Calendario</a>
+         </div>
+         <div class="tile">
+             <a href="https://jsbin.com/?html,js,console"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=jsbin.com" width="16px" alt="JSBin" />JS Bin</a>
+         </div>
+         <div class="tile">
+             <a href="http://convertico.com/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=convertico.com" width="16px" alt="Convertico" />ConvertICO</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.wikipedia.org/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=wikipedia.org" width="16px" alt="wikipedia" />Wikipedia</a>
+         </div>
+         <div class="tile">
+             <a href="https://drive.google.com/drive/my-drive" target="_blank"><img src="images/drive.png" width="16px" alt="google drive" />Google Drive</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.youtube.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=youtube.com" width="16px" alt="youtube" />Youtube</a>
+         </div>
+         <div class="tile">
+             <a href="https://getpocket.com/a/queue/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=getpocket.com" width="16px" alt="pocket" />Pocket</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.mismarcadores.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=mismarcadores.com" width="16px" alt="mis marcadores" />Mis Marcadores</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.w3schools.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=w3schools.com" width="16px" alt="w3schools" />W3Schools</a>
+         </div>
+         <div class="tile">
+             <a href="https://css-tricks.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=css-tricks.com" width="16px" alt="css tricks" />CSS Tricks</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.asp.net/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=asp.net" width="16px" alt="ASP .NET" />ASP.NET</a>
+         </div>
+         <div class="tile">
+             <a href="https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/index" target="_blank"><img src="https://www.google.com/s2/favicons?domain=asp.net" width="16px" alt="guía C#" />Guía C#</a>
+         </div>
+         <div class="tile">
+             <a href="https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-2.console.aws.amazon.com%2Fconsole%2Fhome%3Fregion%3Dus-east-2%26state%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&forceMobileApp=0" target="_blank"><img src="https://www.google.com/s2/favicons?domain=aws.amazon.com" width="16px" alt="AWS" />AWS Manag</a>
+         </div>
+         <div class="tile">
+             <a href="https://keep.google.com/?hl=es" target="_blank"><img src="images/keep.png" width="18px" alt="Keep" />Keep</a>
+         </div>
+         
+     </div>
+     <div class="fila">
+         <h3>Otros</h3>
+         <div class="tile">
+             <a href="https://www.instagram.com/elhartista/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=instagram.com" width="16px" alt="elhartista" />Elhartista</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.instagram.com/HOOTTHINGS/"><img src="https://www.google.com/s2/favicons?domain=instagram.com" width="16px" alt="hootthings" />Hootthings</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.pccomponentes.com/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=pccomponentes.com" width="16px" alt="PCcomponentes" />PC Componentes</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.pcbox.com/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=pcbox.com" width="16px" alt="PCBox" />PC Box</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.wikipedia.org/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=wikipedia.org" width="16px" alt="wikipedia" />Wikipedia</a>
+         </div>
+         <div class="tile">
+             <a href="https://drive.google.com/drive/my-drive" target="_blank"><img src="images/drive.png" width="16px" alt="google drive" />Google Drive</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.youtube.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=youtube.com" width="16px" alt="youtube" />Youtube</a>
+         </div>
+         <div class="tile">
+             <a href="https://getpocket.com/a/queue/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=getpocket.com" width="16px" alt="pocket" />Pocket</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.mismarcadores.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=mismarcadores.com" width="16px" alt="mis marcadores" />Mis Marcadores</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.w3schools.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=w3schools.com" width="16px" alt="w3schools" />W3Schools</a>
+         </div>
+         <div class="tile">
+             <a href="https://css-tricks.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=css-tricks.com" width="16px" alt="css tricks" />CSS Tricks</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.asp.net/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=asp.net" width="16px" alt="ASP .NET" />ASP.NET</a>
+         </div>
+         <div class="tile">
+             <a href="https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/index" target="_blank"><img src="https://www.google.com/s2/favicons?domain=asp.net" width="16px" alt="guía C#" />Guía C#</a>
+         </div>
+         <div class="tile">
+             <a href="" target="_blank"><img src="" width="16px" alt="" /></a>
+         </div>
+         
+     </div>
+     <div class="fila">
+         <h3>Otros</h3>
+         <div class="tile">
+             <a href="https://www.instagram.com/elhartista/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=instagram.com" width="16px" alt="elhartista" />Elhartista</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.instagram.com/HOOTTHINGS/"><img src="https://www.google.com/s2/favicons?domain=instagram.com" width="16px" alt="hootthings" />Hootthings</a>
+         </div>
+         <div class="tile">
+             <a href="https://jsbin.com/?html,js,console"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=jsbin.com" width="16px" alt="JSBin" />JS Bin</a>
+         </div>
+         <div class="tile">
+             <a href="http://convertico.com/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=convertico.com" width="16px" alt="Convertico" />ConvertICO</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.wikipedia.org/"  target="_blank"><img src="https://www.google.com/s2/favicons?domain=wikipedia.org" width="16px" alt="wikipedia" />Wikipedia</a>
+         </div>
+         <div class="tile">
+             <a href="https://drive.google.com/drive/my-drive" target="_blank"><img src="images/drive.png" width="16px" alt="google drive" />Google Drive</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.youtube.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=youtube.com" width="16px" alt="youtube" />Youtube</a>
+         </div>
+         <div class="tile">
+             <a href="https://getpocket.com/a/queue/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=getpocket.com" width="16px" alt="pocket" />Pocket</a>
+         </div>
+         <div class="tile">
+             <a href="http://www.mismarcadores.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=mismarcadores.com" width="16px" alt="mis marcadores" />Mis Marcadores</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.w3schools.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=w3schools.com" width="16px" alt="w3schools" />W3Schools</a>
+         </div>
+         <div class="tile">
+             <a href="https://css-tricks.com/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=css-tricks.com" width="16px" alt="css tricks" />CSS Tricks</a>
+         </div>
+         <div class="tile">
+             <a href="https://www.asp.net/" target="_blank"><img src="https://www.google.com/s2/favicons?domain=asp.net" width="16px" alt="ASP .NET" />ASP.NET</a>
+         </div>
+         <div class="tile">
+             <a href="https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/index" target="_blank"><img src="https://www.google.com/s2/favicons?domain=asp.net" width="16px" alt="guía C#" />Guía C#</a>
+         </div>
+         <div class="tile">
+             <a href="" target="_blank"><img src="" width="16px" alt="" /></a>
+         </div>
+         
+     </div>
+    </div>
+    <div class="inferior">
+        <div class="inf-izq">
+        <img id="hider" src="images/ic_keyboard_arrow_right_white_24px.svg" />
+        <img id="logo" src="images/logo.png" alt="google logo" />
+        </div>
+        <div class="inf-dr">
+            <h2>Derecha</h2>
+            <a class="bookmark" href="https://www.softzone.es"><div class="item-icon"></div><div class="item-name">Softzone</div></a>
+        </div>
+    </div>
+     
+</body>
+</html>
