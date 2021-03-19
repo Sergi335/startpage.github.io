@@ -179,35 +179,43 @@
 
     $(document).ready(function(){
 
-        //Sortable.create(inicio, {/* Options */});
-        let fl1 = document.getElementsByClassName('fl1')[0];
-        let fl2 = document.getElementsByClassName('fl2')[0];
-        let fl3 = document.getElementsByClassName('fl3')[0];
-        let fl4 = document.getElementsByClassName('fl4')[0];
+        let pc = window.matchMedia("(min-width:768px)");
 
-        new Sortable(fl1, {
-            group: 'shared', // set both lists to same group
-            animation: 150,
-            filter: '.colorHead'
-        });
-        
-        new Sortable(fl2, {
-            group: 'shared',
-            animation: 150,
-            filter: '.colorHead'
-        });
-        new Sortable(fl3, {
-            group: 'shared',
-            animation: 150,
-            filter: '.colorHead'
-        });
-        new Sortable(fl4, {
-            group: 'shared',
-            animation: 150,
-            filter: '.colorHead'
-        });
-    })
+        if (pc.matches) {
 
+            //Sortable.create(inicio, {/* Options */});
+            let fl1 = document.getElementsByClassName('fl1')[0];
+            let fl2 = document.getElementsByClassName('fl2')[0];
+            let fl3 = document.getElementsByClassName('fl3')[0];
+            let fl4 = document.getElementsByClassName('fl4')[0];
+
+            new Sortable(fl1, {
+                group: 'shared', // set both lists to same group
+                animation: 150,
+                filter: '.colorHead'
+            });
+            
+            new Sortable(fl2, {
+                group: 'shared',
+                animation: 150,
+                filter: '.colorHead'
+            });
+            new Sortable(fl3, {
+                group: 'shared',
+                animation: 150,
+                filter: '.colorHead'
+            });
+            new Sortable(fl4, {
+                group: 'shared',
+                animation: 150,
+                filter: '.colorHead'
+            });
+
+
+        } else {
+
+        }
+    });
 
     
     
