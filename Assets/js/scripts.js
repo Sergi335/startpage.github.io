@@ -27,7 +27,7 @@ function saludo() {
         
         texto = "Buenos días " + usuario;
         posicion.innerHTML = '<h1 class="saludo">' + texto + '</h1>';
-        documento[0].style.backgroundImage = "url('images/background7.jpg')";
+        documento[0].style.backgroundImage = "url('./assets/images/background7.jpg')";
         encab[0].style.backgroundColor = "rgba(0, 99, 177,.6)";
         boton[0].style.backgroundColor = "rgba(0, 99, 177,.6)";
         temp.style.backgroundColor = "rgba(0, 99, 177,.6)";
@@ -43,7 +43,7 @@ function saludo() {
         
         texto = "Buenas tardes " + usuario;
         posicion.innerHTML = '<h1 class="saludo">' + texto + '</h1>';
-        documento[0].style.backgroundImage = "url('images/background8.jpg')";
+        documento[0].style.backgroundImage = "url('./assets/images/background8.jpg')";
         encab[0].style.backgroundColor = "rgba(85, 177, 0,.6)";
         boton[0].style.backgroundColor = "rgba(85, 177, 0,.6)";
         temp.style.backgroundColor = "rgba(85, 177, 0,.6)";
@@ -58,7 +58,7 @@ function saludo() {
         
         texto = "Buenas noches " + usuario;
         posicion.innerHTML = '<h1 class="saludo">' + texto + '</h1>';
-        documento[0].style.backgroundImage = "url('images/background9.jpg')";
+        documento[0].style.backgroundImage = "url('./assets/images/background9.jpg')";
         encab[0].style.backgroundColor = "rgba(0, 0, 0,.6)";
         boton[0].style.backgroundColor = "rgba(0, 0, 0,.6)";
         temp.style.backgroundColor = "rgba(0, 0, 0,.6)";
