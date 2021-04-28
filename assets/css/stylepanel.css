@@ -433,7 +433,7 @@ input[type=search]:focus {
     position:fixed;
     bottom: 0;
     //border: 1px solid;
-    display: block;
+    display: none;
     width: 97.5%;
     left: 2%;
     height: 50px;
